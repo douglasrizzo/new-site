@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Mapping Numpad keys with sxhkd
-categories: linux keyboard sxhkd
+categories: linux keyboards
 ---
 
-In this tutorial, I explore how to map the Numpad keys to `sxhkd` in a CoolerMaster Masterkeys Pro M ABNT2 keyboard.
+In this tutorial, I explore how to map the Numpad keys to `sxhkd` in a Cooler Master Masterkeys Pro M ABNT2 keyboard.
 
 <!-- TOC -->
 

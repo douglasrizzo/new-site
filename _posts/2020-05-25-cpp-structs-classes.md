@@ -1,7 +1,7 @@
 ---
 layout: post
 title: In C++, classes and structs are the same thing
-categories: cpp
+categories: cpp programming
 ---
 
 **Disclaimer:** I am by no means a C or C++ expert. I have never programmed in C++ professionally, only academically. You can view my C++ work [here](https://github.com/douglasrizzo?tab=repositories&language=c%2B%2B). My reference book for C++ is [Deitel](https://www.amazon.com/How-Program-10th-Paul-Deitel/dp/0134448235). A good playlist to learn C++ is [The Cherno's](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb). Examples were expanded from The Cherno's [YouTube video](https://www.youtube.com/watch?v=fLgTtaqqJp0). Code is available [on GitHub](https://gist.github.com/douglasrizzo/b1375881d1afb70cd1fe76fefa47d3f0).

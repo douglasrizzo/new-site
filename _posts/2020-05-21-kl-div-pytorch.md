@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Solving the mistery of the KL divergence
-categories: python clustering
+categories: python machine-learning
 ---
 
 In this notebook, I try to understand how the KL divergence works, specifically the one from PyTorch.

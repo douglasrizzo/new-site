@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualizing temperature in a Boltzmann policy
-categories: python clustering
+categories: python reinforcement-learning pytorch
 ---
 
 The Boltzmann policy normalizes the final Q values using a softmax function and uses the resulting values as probabilities, selecting an action much like a stochastic policy.
