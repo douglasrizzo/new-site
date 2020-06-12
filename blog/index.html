@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-
+<p style="font-size: small;">
+See posts by <a href="{{ site.baseurl }}/categories">Categories</a> <span style="float:right;"><a href="{{ site.baseurl }}/search">Search</a> posts
+</p></span>
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
@@ -33,9 +35,9 @@ layout: default
       {% if page == paginator.page %}
         <span class="webjeda">{{ page }}</span>
       {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+        <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
       {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
       {% endif %}
     {% endfor %}
 
