@@ -25,11 +25,13 @@ I hope these links can help others as much as they've helped me. The list also s
 
 * Y. Li, “Deep Reinforcement Learning,” arXiv:1810.06339 [cs, stat], Oct. 2018, Accessed: May 08, 2020. [Online]. Available: http://arxiv.org/abs/1810.06339.
 
-## Seminal papers
+<!-- ## Seminal papers -->
 
 ## Courses
 
-* [Introduction to reinforcement learning by David Silver](https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ) [[slides]](https://www.davidsilver.uk/teaching/): I highly recommend pairing this one up with Sutton's book, as the lessons are heaviliy influenced by it.
+* [Reinforcement Learning Specialization on Coursera](https://www.coursera.org/specializations/reinforcement-learning): At the time of this writing, this is a rather new course. It is ministered by Martha and David White from UAlberta and has been endorsed by Richard Sutton himself. Now, I'm not very fond of using an appeal to authority to make a point, so I actually enrolled in the course and started doing it. I believe that, as of now, this is the most educational and informative resource available online to learn the fundamentals of RL from scratch. The professors really know what they're talking about, they use Sutton's book as reference material (which is freely available online), guide you to details that no one would know are important when studying RL alone and prepare you to venture further into the area, with a solid foundation. I definitely recommend this as a starting point for anyone who wants to dig deep into RL.
+
+* [Introduction to reinforcement learning by David Silver](https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ) [[slides]](https://www.davidsilver.uk/teaching/): Before the RL specialization, I believe this playlist was the go-to reference to study RL. David Silver is also a reference in the area and also uses Sutton's book as a reference for the course. My only grudge with the course is that it assumes considerable previous knowledge in many areas, at times sounding more like a graduate course, encouraging students to prove statements while skipping K-armed bandits, for example.
 
 * [Deep RL Bootcamp](https://www.youtube.com/playlist?list=PLsuq9stvuZe4pc8T4NutncqaYzpmwBJtg) [[slides]](https://sites.google.com/view/deep-rl-bootcamp/lectures): lectures with some of the scientists behind the groundbreaking DRL algorithms created in the last years. Good explanations of DQN and policy gradient methods from their creators.
 
@@ -41,7 +43,7 @@ I hope these links can help others as much as they've helped me. The list also s
 
 * [Spinning Up in Deep RL](https://spinningup.openai.com/): *an educational resource produced by OpenAI that makes it easier to learn about deep reinforcement learning.* The website has great summaries about the policy gradient algorithms created by OpenAI, as well as references to the original papers.
 
-* Arthur Juliani's [Simple Reinforcement learning series][ajsrl]
+* Arthur Juliani's [Simple Reinforcement learning series][ajsrl].
 
 ## Algorithm implementations
 
@@ -64,8 +66,8 @@ I hope these links can help others as much as they've helped me. The list also s
 
 * [PyTorch official DQN tutorial](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html): this is the intermediate step in the PyTorch tutorials so, if you fancy learning some PyTorch, I believe this is the most straightforward way to implement and debug your first DRL algorithm.
 
+<!-- ## How to proceed
+
+Start with Sutton's book -->
+
 [ajsrl]: https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-1-fd544fab149
-
-## How to proceed
-
-Start with Sutton's book
