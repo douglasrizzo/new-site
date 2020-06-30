@@ -9,11 +9,11 @@ categories: linux nvidia deep-learning
 - [Introduction](#introduction)
 - [Uninstall what was wrongfully installed](#uninstall-what-was-wrongfully-installed)
 - [Install/downgrade NVIDIA drivers](#installdowngrade-nvidia-drivers)
-    - [Restart computer and test drivers](#restart-computer-and-test-drivers)
+  - [Restart computer and test drivers](#restart-computer-and-test-drivers)
 - [Install CUDA 10.1 and cuDNN 7.6](#install-cuda-101-and-cudnn-76)
-    - [CUDA](#cuda)
-    - [cuDNN](#cudnn)
-    - [Edit `.profile`](#edit-profile)
+  - [CUDA](#cuda)
+  - [cuDNN](#cudnn)
+  - [Edit `.profile`](#edit-profile)
 
 <!-- /TOC -->
 
@@ -90,7 +90,7 @@ yay -S cuda-10.1
 
 cuDNN is available via pacman as `cudnn`, but, even though it lists `cuda>=10` as a dependency and we've just installed `cuda-10.1`, it doesn't recognize the requirement as met (probably because it came from the AUR) and tries to install the pacman `cuda` package, whose version is 10.2. In order to bypass that:
 
-1. go to the [page for the cudnn package](https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/cudnn) in the Arch Linux Package Repository;
+1. go to the AUR page for the cudnn package. The commit we want (containing version 7.6) is [this one](https://git.archlinux.org/svntogit/community.git/tree/repos/community-x86_64?h=packages/cudnn&id=c8950411997c56322bb06bb1388189401911287a);
 2. download the PKGBUILD and accompanying PDF file;
 3. edit the PKGBUILD file, removing the line saying `depends=('cuda>=10')`;
 4. inside the directory with the edited PKGBUILD file and accompanying PDF file, use the commands:
