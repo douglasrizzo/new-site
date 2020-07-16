@@ -30,6 +30,14 @@ I am also the creator of [dodo detector ros](https://github.com/douglasrizzo/dod
 
 For years, I have been a member of the [Study and Research Group in Educational Assessment](http://dgp.cnpq.br/dgp/espelhogrupo/2558665306599960) (a free translation of _Grupo de Estudos e Pesquisas em Avaliação Educacional, Gepave_), where I specialized in the study of [Item Response Theory](https://en.wikipedia.org/wiki/Item_response_theory) and [computerized adaptive tests](https://en.wikipedia.org/wiki/Computerized_adaptive_testing). While I am not active as of late, I had the opportunity to be a part in a few projects, listed below.
 
+### catsim
+
+<center>
+<img src="https://douglasrizzo.com.br/catsim/_static/logo.svg" width="40%"/>
+</center>
+
+A Python package that simulates a set of examinees taking a computerized adaptive test. There are different options for initialization, selection and proficiency estimation methods as well as stopping criteria for the test. Useful for studying item exposure and can also be used to power other applications. Documentation [here](http://douglasrizzo.com.br/catsim/). ArXiv paper [here](https://arxiv.org/abs/1707.03012).
+
 ### jCAT
 
 Publication in [English](https://www.researchgate.net/publication/326803834_How_to_build_a_Computerized_Adaptive_Test_with_free_software_and_pedagogical_relevance) and [Portuguese](https://www.researchgate.net/publication/327704465_Teste_Adaptativo_Informatizado_Como_Recurso_Tecnologico_para_Alfabetizacao_Inicial).
@@ -40,15 +48,6 @@ jCAT is a Java EE web application whose purpose is to apply both an electronic v
 <img src="/images/jcat-item.png" width="48%"/> <img src="/images/jcat-relatorio.png" width="48%"/>
 </center>
 
-### catsim
-
-
-<center>
-<img src="https://douglasrizzo.com.br/catsim/_static/logo.svg" width="40%"/>
-</center>
-
-A Python package that simulates a set of examinees taking a computerized adaptive test. There are different options for initialization, selection and proficiency estimation methods as well as stopping criteria for the test. Useful for studying item exposure and can also be used to power other applications. Documentation [here](http://douglasrizzo.com.br/catsim/). ArXiv paper [here](https://arxiv.org/abs/1707.03012).
-
 ## Miscellaneous Projects
 
 ### FEI LaTeX class
@@ -57,4 +56,10 @@ a LaTeX class used by [FEI University Center](http://www.fei.edu.br/) students t
 
 ### Algorithm Implementations
 
-I have implemented a few [machine learning and reinforcement learning algorithms](http://douglasrizzo.com.br/machine_learning/), as well as some interesting [numerical analysis procedures](http://douglasrizzo.com.br/numerical_analysis/) and a [full-fledged matrix class](http://douglasrizzo.com.br/matrix/), all in C++. They may not be directly useful in third-party projects, as they are not as optimized as their commercial counterparts, but they are nonetheless well documented for those interested in learning.
+These were implemented in C++:
+
+* [machine learning and reinforcement learning algorithms](http://douglasrizzo.com.br/machine_learning/)
+* [numerical analysis procedures](http://douglasrizzo.com.br/numerical_analysis/)
+* [full-fledged matrix class](http://douglasrizzo.com.br/matrix/)
+
+They may not be directly useful in third-party projects, as they are not as optimized as their commercial counterparts, but they are nonetheless well documented for those interested in learning.
