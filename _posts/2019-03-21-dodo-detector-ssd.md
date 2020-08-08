@@ -1,14 +1,18 @@
 ---
 layout: post
 title: dodo_detector Single Shot Detector example
-categories: jupyter python object-detection
+categories: jupyter python object-detection programming
 ---
 
-In this notebook, I'll exemplify how to use the TFObjectDetector built into [dodo_detector](https://douglasrizzo.github.io/dodo_detector/) to detect objects in images. Please note that, for this tutorial, TensorFlow as well as the TensorFlow Object Detection API must be installed and in your PYTHONPATH.
+All of the posts under the "jupyter" category were Jupyter notebooks I converted to Markdown using Pandoc.
 
-Documentation for the TFObjectDetector is available [here](https://douglasrizzo.github.io/dodo_detector/dodo_detector.html#dodo_detector.detection.TFObjectDetector).
+---
 
-First, we'll download a pre-trained model from the [model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md), trained on the COCO data set, as well as the COCO label map and an example image found on the internet.
+In this notebook, I'll exemplify how to use the `TFObjectDetector` class built into [dodo_detector](https://douglasrizzo.github.io/dodo_detector/) to detect objects in images. Please note that, for this tutorial, TensorFlow as well as the TensorFlow Object Detection API must be installed and in your `PYTHONPATH`.
+
+Documentation for the `TFObjectDetector` class is available [here](https://douglasrizzo.github.io/dodo_detector/dodo_detector.html#dodo_detector.detection.TFObjectDetector).
+
+First, we'll download a pre-trained model from the [model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md), trained on the COCO data set, as well as the COCO label map and an example image found on the internet.
 
 
 ```python

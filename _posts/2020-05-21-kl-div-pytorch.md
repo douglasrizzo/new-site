@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Solving the mistery of the KL divergence
-categories: python machine-learning
+categories: jupyter python machine-learning pytorch programming
+---
+
+All of the posts under the "jupyter" category were Jupyter notebooks I converted to Markdown using Pandoc.
+
 ---
 
 In this notebook, I try to understand how the KL divergence works, specifically the one from PyTorch.
@@ -81,7 +85,7 @@ kl_div(a1, a2)
     tensor(0.8762)
 
 
-    /home/dodo/.anaconda3/lib/python3.7/site-packages/torch/nn/functional.py:2247: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+    /home/user/.anaconda3/lib/python3.7/site-packages/torch/nn/functional.py:2247: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
       warnings.warn("reduction: 'mean' divides the total loss by both the batch size and the support size."
 
 

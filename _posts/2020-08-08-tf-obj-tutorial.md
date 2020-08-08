@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to train your own object detection models using the TensorFlow Object Detection API (2020 Update)
-categories: tensorflow deep-learning python object-detection
+categories: tensorflow deep-learning python object-detection tutorial
 ---
 
 This started as a summary of [this nice tutorial](https://medium.com/towards-data-science/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9), but has since then become its own thing.

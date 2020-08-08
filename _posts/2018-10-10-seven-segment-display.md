@@ -1,7 +1,11 @@
 ---
 layout: post
 title: What's The Longest Word You Can Write With Seven-Segment Displays?
-categories: jupyter python
+categories: jupyter python programming
+---
+
+All of the posts under the "jupyter" category were Jupyter notebooks I converted to Markdown using Pandoc.
+
 ---
 
 In this iPython notebook, I try to implement what was done in [this video](https://www.youtube.com/watch?v=zp4BMR88260). Basically, we try to find out what are the longest words that can be displayed in a seven-segment display.
