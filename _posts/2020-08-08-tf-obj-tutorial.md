@@ -21,7 +21,7 @@ This started as a summary of [this nice tutorial](https://medium.com/towards-dat
 
 1.  Choose a TensorFlow installation. TensorFlow 1 and 2 have different neural networks avaliable, so check [here](TF1-zoo) and [here](TF2-zoo) to make your choice.
 
-    * **Tip:** if you opt for one of the TF1 models, please note that the Ojbect detection API is only officialy compatible with TF 1.15.O, which works only with CUDA 10.0 (unless you compile from source). From personal experience, I know that all versions of TF from 1.12 and backwards do not work with the Object Detection API anymore.
+    * **Tip:** if you opt for one of the TF1 models, please note that the Object Detection API is only officialy compatible with TF 1.15.O, which works only with CUDA 10.0 (unless you compile from source). From personal experience, I know that all versions of TF from 1.12 and backwards do not work with the Object Detection API anymore.
 
 2.  [Install TensorFlow](https://www.tensorflow.org/install/).
 3.  Download the TensorFlow [models repository](https://github.com/tensorflow/models).
