@@ -84,13 +84,16 @@ For these steps, I'll recommend a collection of script I mase, which are availab
 ## Training the network
 
 1.  Train the model. To do it locally, follow the steps available here: [[TF1]](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_training_and_evaluation.md)[[TF2]](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_training_and_evaluation.md).
+    
     **Optional:** in order to check training progress, TensorBoard can
-    be started pointing its `--logdir` to the `--model_dir` of
-    object\_detection/model\_main.py.
+    be started pointing its `--logdir` to the `--model_dir` path from the previous step.
 
 2. Export the network, like [this](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md).
 
-3. Use the exported `.pb` in your object detector.
+    **Tip:** if your training completes successfully but you get a scary "data loss error" like [this one](https://github.com/tensorflow/models/issues/2676) when exporting, make sure you point the export script to the checkpoint file accordingly. For example, if your checkpoint file is named 
+    `model.ckpt-50000.data-00000-of-00001` or `model.ckpt.data-00000-of-00001`, you have to pass the file name as `model.ckpt-50000` or `model.ckpt`, respectively.
+
+3. In the directory where the export script was pointed to, a file called `frozen_inference_graph.pb` will be created. Use this file alongside the label map to detect objects in your application. An example of how to achieve this can be found in [this notebook](https://github.com/tensorflow/models/blob/master/research/object_detection/colab_tutorials/object_detection_tutorial.ipynb) from the Models repository. Alternatively, you can give my package [dodo detector](https://douglasrizzo.com.br/dodo_detector/) a try, which uses these same files, but abstracts the inner workings of TensorFlow. You can see it in action in [this Gist](https://gist.github.com/douglasrizzo/fd4cff7cdf53b3ad08d67f736e5017ea).
 
 ## Final Tips
 
