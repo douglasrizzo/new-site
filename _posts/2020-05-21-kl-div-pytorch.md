@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Solving the mistery of the KL divergence
-categories: jupyter python machine-learning pytorch programming
+categories: colab python machine-learning pytorch programming
 ---
 
-All of the posts under the "jupyter" category were Jupyter notebooks I converted to Markdown using Pandoc.
-
----
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1f2NnBBRUjrZYLdJC9-MPn1TqXdxW-s2e?usp=sharing)
 
 In this notebook, I try to understand how the KL divergence works, specifically the one from PyTorch.
 

@@ -1,12 +1,10 @@
 ---
 layout: post
 title: dodo_detector Single Shot Detector example
-categories: jupyter python object-detection programming
+categories: colab python object-detection programming
 ---
 
-All of the posts under the "jupyter" category were Jupyter notebooks I converted to Markdown using Pandoc.
-
----
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dBxAyofXu5xecTDDhX7euqj0QZSFSjl7?usp=sharing)
 
 In this notebook, I'll exemplify how to use the `TFObjectDetector` class built into [dodo_detector](https://douglasrizzo.github.io/dodo_detector/) to detect objects in images. Please note that, for this tutorial, TensorFlow as well as the TensorFlow Object Detection API must be installed and in your `PYTHONPATH`.
 
