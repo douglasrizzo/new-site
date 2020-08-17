@@ -33,7 +33,6 @@ A crude solution may involve creating 3 shell scripts, or 3 shell functions, whi
 
 Script 1:
 
-
 ```sh
 ts python train.py --network 1 --dataset 1
 ts python train.py --network 1 --dataset 2

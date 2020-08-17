@@ -14,7 +14,6 @@ Este notebook é uma continuação de um outro no qual a base de dados utilizada
 
 Vamos utilizar scikit-learn e Keras. Também vamos criar algumas funções para simplificar o treinamento e avaliar de uma rede neural, que já foram descritos no notebook anterior.
 
-
 ```python
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -105,7 +104,6 @@ A redução de dimensionalidade de dados proveniente do PCA também é útil par
 
 Usaremos o pacote *scikit-learn* para carregar a base de dados Iris. Repare que ela possui 150 flores e 4 características por flor. No notebook anterior, utilizamos todas as 4 características para treinar nossa rede neural. Neste notebook, tentaremos realizar a mesma classificação com um menor número de características.
 
-
 ```python
 iris_X, iris_y = load_iris(return_X_y=True)
 
@@ -130,11 +128,9 @@ print(iris_X[:5])
      [4.6 3.1 1.5 0.2]
      [5.  3.6 1.4 0.2]]
 
-
 # Aplicando o PCA na base de dados Iris
 
 O PCA está implementado no *scikit-learn* e pode ser aplicado como no exemplo abaixo. Vamos criar uma função que aplica o PCA a um conjunto de dados, exibe informações de sua aplicação e retorna o conjuntos de dados transformados.
-
 
 ```python
 def apply_PCA(X, n_components):
@@ -151,7 +147,6 @@ def apply_PCA(X, n_components):
 Vamos aplicar o PCA nas medidas de nossas flores e observar a remoção da correlação das colunas e concentração das informações em menos colunas.
 
 
-
 ```python
 iris_X_4cp = apply_PCA(iris_X, 4)
 ```
@@ -160,7 +155,6 @@ iris_X_4cp = apply_PCA(iris_X, 4)
     Tamanho da base de dados depois:  (150, 4)
     Porcentagem da variância explicada por cada coluna: [0.92461872 0.05306648 0.01710261 0.00521218]
     Variância acumulada nas colunas remanescentes: 1.0
-
 
 Perceba como nossa base dados ainda possui o mesmo número de características (4). Porém, 92% da informação das colunas originais (representada pela variância) está agora concentrada na primeira coluna. Isso é um forte indicativo de que podemos classificar nossos dados utilizando menos características.
 
@@ -172,7 +166,6 @@ Agora vamos aplicar o PCA e remover a coluna menos informativa. Isso tem o mesmo
 
 Repare como as colunas remanescentes ainda mantêm 99,4% da informação da base de dados original.
 
-
 ```python
 iris_X_3cp = apply_PCA(iris_X, 3)
 ```
@@ -182,9 +175,7 @@ iris_X_3cp = apply_PCA(iris_X, 3)
     Porcentagem da variância explicada por cada coluna: [0.92461872 0.05306648 0.01710261]
     Variância acumulada nas colunas remanescentes: 0.9947878161267247
 
-
 Vamos utilizar nossas funções de treinamento e avaliação de redes neurais para treinar um modelo nos dados reduzidos.
-
 
 ```python
 do_everything(iris_X_3cp, iris_y)
@@ -209,13 +200,10 @@ do_everything(iris_X_3cp, iris_y)
     None
 
 
-
 ![png](../images/output_14_1.png)
 
 
-
 ![png](../images/output_14_2.png)
-
 
                   precision    recall  f1-score   support
     
@@ -231,13 +219,11 @@ do_everything(iris_X_3cp, iris_y)
      [ 0  6  0]
      [ 0  0 11]]
 
-
 É possível observar que a rede neural é treinada com sucesso utilizando apenas as 3 características mais informativas provenientes do PCA. A rede ainda alcança altos valores de precisão, revocação e F1-score. Também é possível perceber que, assim como no notebook anterior, o *overfitting* ainda ocorre caso treinemos a rede neural por épocas demais. Isso, o PCA não resolve.
 
 # Aplicando o PCA para 2 componentes
 
 Vamos reduzir nossa base de dados mais ainda, mantendo apenas 2 colunas.
-
 
 ```python
 iris_X_2cp = apply_PCA(iris_X, 2)
@@ -248,9 +234,7 @@ iris_X_2cp = apply_PCA(iris_X, 2)
     Porcentagem da variância explicada por cada coluna: [0.92461872 0.05306648]
     Variância acumulada nas colunas remanescentes: 0.977685206318795
 
-
 Mesmo mantendo metade das colunas originais, ainda retemos 97,7% da informação de nossas flores. Vamos treinar nosso classificador usando esta nova base.
-
 
 ```python
 do_everything(iris_X_2cp, iris_y)
@@ -275,13 +259,10 @@ do_everything(iris_X_2cp, iris_y)
     None
 
 
-
 ![png](../images/output_19_1.png)
 
 
-
 ![png](../images/output_19_2.png)
-
 
                   precision    recall  f1-score   support
     
@@ -297,7 +278,6 @@ do_everything(iris_X_2cp, iris_y)
      [ 0  5  1]
      [ 0  1 10]]
 
-
 Novamente, a rede neural ainda classifica os dados com sucesso, porém pode começar a demonstrar perda de desempenho, como demonstrado por valores de precisão, revocação e F1-score menores ou uma matriz de confusão com valores fora da diagonal principal.
 
 Outra informação muito interessante de ser reparada é a redução no número de pesos treináveis da rede, exibido no resumo da rede neural no início da célula anterior (`Trainable params`). A rede neural treinada para classificar os dados originais (com 4 características) precisa aprender mais pesos (213) do que uma rede que classifica dados com menos características (2 características, 193 pesos). Isso significa que, ao utilizar o PCA, uma rede neural menor que processa menos dados pode potencialmente ter o mesmo desempenho que uma rede maior que processa mais dados.
@@ -305,7 +285,6 @@ Outra informação muito interessante de ser reparada é a redução no número 
 # E, finalmente...
 
 Vamos treinar a rede para classificar nossa flores **utilizando apenas 1 característica**. A base de dados mantém 92,4% da informação, a rede neural possui 10 pesos a menos e ainda alcança um desempenho satisfatório.
-
 
 ```python
 iris_X_1cp = apply_PCA(iris_X, 1)
@@ -335,13 +314,10 @@ do_everything(iris_X_1cp, iris_y)
     None
 
 
-
 ![png](../images/output_22_1.png)
 
 
-
 ![png](../images/output_22_2.png)
-
 
                   precision    recall  f1-score   support
     
@@ -356,7 +332,6 @@ do_everything(iris_X_1cp, iris_y)
     [[13  0  0]
      [ 0  6  0]
      [ 0  3  8]]
-
 
 # Conclusão
 

@@ -14,7 +14,6 @@ Aqui, vamos enfrentar o desafio de realizar a classificação da base de dados I
 
 As funções abaixo aplicam o PCA numa base de dados e avaliam uma rede neural, retornando as medidas para serem exibidas em gráficos posteriormente.
 
-
 ```python
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -74,7 +73,6 @@ def evaluate_model(model, X, y):
 
 Usaremos o pacote *scikit-learn* para carregar a base de dados Iris. Vamos gerar versões com o maior e menor número possível de componentes principais (4 e 1, respectivamente).
 
-
 ```python
 iris_X, iris_y = load_iris(return_X_y=True)
 iris_X_large = apply_PCA(iris_X, 4)
@@ -90,9 +88,7 @@ iris_X_tiny = apply_PCA(iris_X, 1)
     Porcentagem da variância explicada por cada coluna: [0.92461872]
     Variância acumulada nas colunas remanescentes: 0.9246187232017271
 
-
 As funções abaixo vão criar duas rede neurais distintas. A primeira foi utilizada nos tutoriais anterior e possui 4 entradas, 4 camadas e 213 pesos treináveis. A segunda rede possui aproximadamente 10% do tamanho da primeira, 1 entrada, 3 camadas e 23 pesos treináveis.
-
 
 ```python
 def create_large_model(input_dim):
@@ -152,9 +148,7 @@ tiny_net.summary()
     Non-trainable params: 0
     _________________________________________________________________
 
-
 Vamos utilizar nossa função `evaluate_model()` para avaliar as duas redes. A rede maior sera treinada na base com 4 componentes principais e a rede menor, na base com 1 componente principal.
-
 
 ```python
 acc1_large, l1_large, acc_v_large, lv_large, acc2_large, l2_large = evaluate_model(large_net, iris_X_large, iris_y)
@@ -188,11 +182,9 @@ acc1_tiny, l1_tiny, acc_v_tiny, lv_tiny, acc2_tiny, l2_tiny = evaluate_model(tin
      [ 0  3  3]
      [ 0  0 11]]
 
-
 Os valores podem mudar aleatoriamente, porém é possível perceber através dos valores de precisão, recall, F1-score e pela matriz de confusão que o desempenho de ambas as redes é comparável e, muitas vezes, idêntico.
 
 Vamos gerar gráficos das 6 medidas coletadas dos dois modelos.
-
 
 ```python
 fig, axes = plt.subplots(3,2, False,figsize=(20, 15), squeeze=True)
@@ -240,9 +232,7 @@ axes[2][1].set_xlabel(xlabel)
 plt.show()
 ```
 
-
 ![png](../images/output_10_0.png)
-
 
 Ambas as redes foram treinadas por 500 épocas e avaliadas no conjunto de validação para constatar a presença de *overfitting* (4 primeiros gráficos). Depois, foram treinadas novamente por 150 épocas na totalidade dos dados de treinamento (2 últimos gráficos).
 

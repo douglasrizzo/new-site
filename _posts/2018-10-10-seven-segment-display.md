@@ -12,7 +12,6 @@ In this iPython notebook, I try to implement what was done in [this video](https
 
 First, I download the same dictionary file that was used in the video.
 
-
 ```python
 import os
 
@@ -39,7 +38,6 @@ if not os.path.exists(dict_file):
 
 Then, I use the code that was also [provided in the repository](https://github.com/dwyl/english-words/blob/master/read_english_dictionary.py) (which isn't remarkable in any way, but I like to add the disclaimer that I did not code the following cell) to load all words into a set.
 
-
 ```python
 with open('words_alpha.txt') as word_file:
     valid_words = set(word_file.read().split())
@@ -49,15 +47,12 @@ len(valid_words)
 
 
 
-
     370098
-
 
 
 Next, I use the same list of invalid letters that was used in the video. These are letters that can't be displayed in a seven-segment display.
 
 I use the set subtraction operation to remove invalid words from our giant set of words
-
 
 ```python
 invalid_letters='gkmqvwxz'
@@ -72,13 +67,11 @@ valid_words -= invalid_words
 
 I then transform our giant set of words into a giant list of words and sort it by the size of the words in descending order.
 
-
 ```python
 valid_words = list(valid_words)
 valid_words.sort(key=lambda x: len(x),reverse=True)
 valid_words[0:30]
 ```
-
 
 
 
@@ -114,9 +107,7 @@ valid_words[0:30]
      'disproportionableness']
 
 
-
 Just to be thorough, I add the extra two letters that were added at the end of the video and filter the list again.
-
 
 ```python
 invalid_words = set()
@@ -132,9 +123,7 @@ len(valid_words)
 
 
 
-
     33352
-
 
 
 
@@ -143,7 +132,6 @@ valid_words = list(valid_words)
 valid_words.sort(key=lambda x: len(x),reverse=True)
 valid_words[0:30]
 ```
-
 
 
 
@@ -177,5 +165,4 @@ valid_words[0:30]
      'supertranscendent',
      'blunderheadedness',
      'unadulteratedness']
-
 

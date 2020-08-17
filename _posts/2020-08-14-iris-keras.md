@@ -55,7 +55,6 @@ Usaremos o pacote *scikit-learn* para carregar a base de dados e visualizar suas
 
 Repare que a base possui 150 flores, que as classes são representadas pelos números inteiros 0, 1 e 2 e as características das flores são armazenadas em uma única matriz de 150 linhas (as flores) por 4 colunas (as medidas).
 
-
 ```python
 iris_X, iris_y = load_iris(return_X_y=True)
 
@@ -80,11 +79,9 @@ print(iris_X[:5])
      [4.6 3.1 1.5 0.2]
      [5.  3.6 1.4 0.2]]
 
-
 Vamos separar nossa base de dados em conjuntos de treinamento e de teste. O conjunto de treinamento será utilizado para treinar o modelo criado e o conjunto de testes, utilizado na avaliação do modelo após o treinamento.
 
 O desempenho da rede neural no conjunto de treinamento é um indicativo da **capacidade de aprendizado** do modelo, enquanto o desempenho no conjunto de testes indica a **capacidade de generalização** da rede, ou seja, sua capacidade de classificar novos dados (nunca antes vistos) corretamente.
-
 
 ```python
 X_train, X_test, y_train, y_test = train_test_split(iris_X,
@@ -109,7 +106,6 @@ Uma forma de mitigar este problema é fazer com que o aprendizado de cada classe
 Para isso, modificaremos a representação de nossas classes utilizando utilizando [*one-hot encoding*](https://en.wikipedia.org/wiki/One-hot), uma espécie de categorização de dados que torna o aprendizado de classe linearmente independente para a rede neural.
 
 Perceba como os números 0, 1 e 2 se tornam as sequências 100, 010 e 001, respectivamente.
-
 
 ```python
 y_train_onehot = keras.utils.to_categorical(y_train, num_classes = 3)
@@ -141,7 +137,6 @@ print(y_test_onehot[:5])
      [0. 1. 0.]
      [1. 0. 0.]]
 
-
 # Declarando a topologia da rede neural
 
 Neste notebook, uma rede neural será utilizada para descobrir a qual das 3 espécies cada flor pertence, dadas suas 4 medidas. Em outras palavras, a rede neural será um classificador treinado para prever em qual classe (de 3) um vetor de 4 valores pertence.
@@ -155,7 +150,6 @@ Repare que o tamanho da entrada de uma camada equivale ao tamanho da saída da c
 A última camada da rede tem como saída vetores de tamanho 3, correspondentes à quantidade de espécies de flores que desejamos classificar.
 
 Vamos criar uma função para conseguir recriar o mesmo modelo no futuro.
-
 
 ```python
 def create_model():
@@ -338,7 +332,6 @@ Em nosso contexto, podemos imaginar que essas medidas respondem às seguintes pe
 - **Precisão:** De todas as flores que meu classificador indicou como sendo da classe *iris setosa*, quais realmente são dessa classe?
 
 - **Revocação:** De todas as flores da espécie *iris setosa* presentes na minha base de dados, quantas o meu classificador conseguiu identificar?
-
 
 ```python
 print(classification_report(y_test, y_pred_onehot))

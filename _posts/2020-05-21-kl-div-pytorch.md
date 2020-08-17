@@ -14,7 +14,6 @@ Basically, given an $N \times \ast $ tensor `x`, where $\ast$ represents any num
 
 An easy way to do that to the output of a neural network is to use the softmax function. Another is to divide each value inside the tensor by the sum of all values.
 
-
 ```python
 import torch
 import torch.nn.functional as F
@@ -26,7 +25,6 @@ First, both tensors must have the same dimensions and every single tensor after 
 
 Furthermore, we need to apply the log to the values in the
 first collection. `log_softmax(0)` accomplishes both at the same time.
-
 
 ```python
 def kl_div(a1, a2):
@@ -53,7 +51,6 @@ def kl_div(a1, a2):
 ```
 
 Here I apply the above function on 2D tensors.
-
 
 ```python
 torch.manual_seed(1)
@@ -82,13 +79,10 @@ kl_div(a1, a2)
     tensor(0.8762)
     tensor(0.8762)
 
-
     /home/user/.anaconda3/lib/python3.7/site-packages/torch/nn/functional.py:2247: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
       warnings.warn("reduction: 'mean' divides the total loss by both the batch size and the support size."
 
-
 Here I apply the above function on 3D tensors.
-
 
 ```python
 torch.manual_seed(1)

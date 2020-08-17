@@ -12,7 +12,6 @@ Documentation for the `TFObjectDetector` class is available [here](https://dougl
 
 First, we'll download a pre-trained model from the [model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md), trained on the COCO data set, as well as the COCO label map and an example image found on the internet.
 
-
 ```python
 ![ -e faster_rcnn_resnet50_coco_2018_01_28.tar.gz ] || \
     wget http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet50_coco_2018_01_28.tar.gz
@@ -33,19 +32,16 @@ First, we'll download a pre-trained model from the [model zoo](https://github.co
 
 Load the packages necessary to read and display images, as well as the detection package
 
-
 ```python
 import numpy as np
 from PIL import Image
 from dodo_detector.detection import TFObjectDetector
 ```
 
-
 ```python
 # load an image as a numpy array
 im = np.array(Image.open('pedestrians01.jpg'))
 ```
-
 
 ```python
 # create the detector, pointing to the pre-trained model and the label map
@@ -55,12 +51,10 @@ detector = TFObjectDetector('faster_rcnn_resnet50_coco_2018_01_28/frozen_inferen
 marked_image, objects = detector.from_image(im)
 ```
 
-
 ```python
 # list objects found. locations are given in tuples in the format (ymin, xmin, ymax, xmax)
 objects
 ```
-
 
 
 
@@ -76,11 +70,9 @@ objects
 
 
 
-
 ```python
 Image.fromarray(marked_image)
 ```
-
 
 
 
