@@ -19,11 +19,15 @@ I hope these links can help others as much as they've helped me. The list also s
 
 ## Books and surveys
 
-* R. S. Sutton and A. G. Barto, Reinforcement Learning: An Introduction, 2nd ed. Cambridge, Mass: The MIT Press, 2018. Freely and legally available [here](http://www.incompleteideas.net/book/the-book.html) (you can find my name in [the errata](http://www.incompleteideas.net/book/errata.html), lol)
+The current textbook for the area of reinforcement learning in general is
 
-* Y. Li, “Deep Reinforcement Learning,” arXiv:1810.06339 [cs, stat], Oct. 2018, Accessed: May 08, 2020. [Online]. Available: http://arxiv.org/abs/1810.06339.
+> R. S. Sutton and A. G. Barto, Reinforcement Learning: An Introduction, 2nd ed. Cambridge, Mass: The MIT Press, 2018.
 
-<!-- ## Seminal papers -->
+It is freely and legally available [here](http://www.incompleteideas.net/book/the-book.html) and you can find my name in [the errata](http://www.incompleteideas.net/book/errata.html).
+
+A textual reference for the overall area of deep RL is hard to pinpoint, but personally, I recommend the following survey:
+
+> Y. Li, “Deep Reinforcement Learning, ” arXiv:1810.06339 [cs, stat], Oct. 2018, Accessed: May 08, 2020. [Online]. Available: http://arxiv.org/abs/1810.06339.
 
 ## Courses
 
