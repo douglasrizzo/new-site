@@ -8,11 +8,11 @@ categories: python reinforcement-learning pytorch programming
 
 The Boltzmann policy normalizes the final Q values using a softmax function and uses the resulting values as probabilities, selecting an action much like a stochastic policy.
 
-$$P(a_i) = \frac{\exp(Q_{a_i})}{\sum_{a \in A} \exp(Q_a)}$$
+\\[P(a_i) = \frac{\exp(Q_{a_i})}{\sum_{a \in A} \exp(Q_a)}\\]
 
 An additional step is to use a temperature parameter $\tau$ to control the spread of the probabilities between actions.
 
-$$P(a_i) = \frac{\exp(Q_{a_i}/\tau)}{\sum_{a \in A}\exp(Q_a/\tau)}$$
+\\[P(a_i) = \frac{\exp(Q_{a_i}/\tau)}{\sum_{a \in A}\exp(Q_a/\tau)}\\]
 
 In this notebook, I visualize the effect of different values of $\tau$ in a generated discrete distribution.
 

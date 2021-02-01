@@ -40,11 +40,11 @@ In this post, given the number of updates we will apply to the learning rate (wh
 
 At update step $m$, the value of $\eta_m=\eta_0 \cdot \gamma^m$. If we take $\eta_m$ as the final possible value of $\eta$ and, by consequence, its lowest one, and select a reasonable value for it, we can then solve for $\gamma$:
 
-$$\eta_m=\eta_0 \cdot \gamma^m$$
+\\[ \eta_m=\eta_0 \cdot \gamma^m \\]
 
-$$\frac{\eta_m}{\eta_0}=\gamma^m$$
+\\[ \frac{\eta_m}{\eta_0}=\gamma^m \\]
 
-$$\gamma=\sqrt[m]{\frac{\eta_m}{\eta_0}}$$
+\\[ \gamma=\sqrt[m]{\frac{\eta_m}{\eta_0}} \\]
 
 The value of $m$ can be taken as the number of times $\eta_0$ will be multiplied by $\gamma$ until the end of training. Bear in mind that, while optimally, we would like to update $\eta$ after every epoch (making $m=M$), this can introduce numerical errors, since $\gamma$ would need to be too close to 1 for updates to be small enough. Instead, we set $m < M$ and tell PyTorch/TensorFlow to update $\eta$ after a number of steps $n$ such that, by the end of training, $\eta$ has been updated $m$ times.
 

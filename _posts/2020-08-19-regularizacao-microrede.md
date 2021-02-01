@@ -102,11 +102,11 @@ Na imagem abaixo, ambas as funções azul e verde se ajustam aos dados vermelhos
 
 A diferença entre as duas funções está no fato da função verde ter sido regularizada. Em sua forma mais simples, a regularização é feita somando-se os pesos da rede neural à função de erro que a rede tenta minimizar. Imaginando que $L(\theta)$ é a função de erro que usamos até agora, $R(\theta)$ é o novo termo de regularização que incluímos.
 
-$$J(\theta)=L(\theta) + \lambda R(\theta)$$
+\\[J(\theta)=L(\theta) + \lambda R(\theta)\\]
 
 Uma regularização comumente usada é a L2, na qual somamos o quadrado dos pesos da rede neural à função de erro. Isso tem o efeito de punir demasiadamente pesos muito grandes, ignorando pesos pequenos. O termo $\lambda$ é um coeficiente que indica o quão relevante o termo de regularização é na fórmula total do erro. Ele será utilizado na declaração da rede neural que faremos em Keras.
 
-$$J(\theta)=L(\theta) + \lambda \sum_w^{\theta}w^2$$
+\\[J(\theta)=L(\theta) + \lambda \sum_w^{\theta}w^2\\]
 
 Com a regularização, a rede neural deve alcançar o menor erro possível com os menores pesos possíveis, evitando o *overfitting*.
 
