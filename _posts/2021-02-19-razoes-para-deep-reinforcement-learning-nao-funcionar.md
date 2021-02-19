@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Razões para deep reinforcement learning não funcionar
-categories: deep-reinforcement-learning
+categories: deep-reinforcement-learning português
 ---
 
 Essa é uma compilação de textos que eu encontrei na internet em momentos de frustração com meu trabalho. Eu os resumi e traduzi para compartilhar com as pessoas sempre que me perguntarem porque trabalhar com DRL é uma desgraça.
