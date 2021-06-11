@@ -12,12 +12,14 @@ While I have used LaTeX Workshop for a long time, I started experiencing a few i
 
 ## What I use now
 
-* Syntax highlighting [Rich LaTeX syntax highlighting (for use with Texlab)](https://marketplace.visualstudio.com/items?itemName=vomout.latex-syntax).
-* Grammar checking: [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex). Be sure to check the [documentation](https://valentjn.github.io/vscode-ltex/docs/settings.html) to learn how to configure the extension to check different languages.
-* Code completion: [TeXLab VS Code extension](https://marketplace.visualstudio.com/items?itemName=efoerster.texlab). It depends on another program called [TeXLab](https://texlab.netlify.app/), but the extension usually install it automatically.
-  By configuring this extension in VSCode Settings, you also get:
-  - LaTeX formatting (with latexindent)
-  - Compilation via the F5 shortcut (with latexmk)
-  - Linting (with chktex)
-  - Opening the final PDF file with a shortcut (through the [forward search](https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md) option)
-* PDF visualization: If TeXLab has not worked out for you when opening PDF files, you can use an extension called [Open](https://marketplace.visualstudio.com/items?itemName=sandcastle.vscode-open), which opens a file in its default application.
+- Code completion: [TeXLab VS Code extension](https://marketplace.visualstudio.com/items?itemName=efoerster.texlab). It depends on another program called [TeXLab](https://texlab.netlify.app/), but the extension usually installs it automatically.
+- Syntax highlighting [Rich LaTeX syntax highlighting (for use with Texlab)](https://marketplace.visualstudio.com/items?itemName=vomout.latex-syntax).
+- Grammar checking: [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex). Be sure to check the [documentation](https://valentjn.github.io/vscode-ltex/docs/settings.html) to learn how to configure the extension to check different languages.
+- PDF visualization: If TeXLab has not worked out for you when opening PDF files, you can use an extension called [Open](https://marketplace.visualstudio.com/items?itemName=sandcastle.vscode-open), which opens a file in its default application.
+
+The TeXLab VS Code extension also provides other useful features, as long as the appropriate programs are installed and in your Linux `PATH` (or whatever the equivalent in Mac/Windows is). These assorted programs are usually included in TeX Live, but can be installed through your distribution's package manager, if you are on Linux.
+
+- LaTeX formatting (with `latexindent`)
+- Compilation via the F5 shortcut (with `latexmk`)
+- Linting (with `chktex`)
+- Opening the final PDF file with a shortcut (through the [forward search](https://github.com/latex-lsp/texlab/blob/master/docs/previewing.md) option)
