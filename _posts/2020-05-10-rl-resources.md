@@ -31,15 +31,21 @@ A textual reference for the overall area of deep RL is hard to pinpoint, but per
 
 ## Courses
 
-* [Reinforcement Learning Specialization on Coursera](https://www.coursera.org/specializations/reinforcement-learning): At the time of this writing, this is a rather new course. It is ministered by Martha and David White from UAlberta and has been endorsed by Richard Sutton himself. Now, I'm not very fond of using an appeal to authority to make a point, so I actually enrolled in the course and started doing it. I believe that, as of now, this is the most educational and informative resource available online to learn the fundamentals of RL from scratch. The professors really know what they're talking about, they use Sutton's book as reference material (which is freely available online), guide you to details that no one would know are important when studying RL alone and prepare you to venture further into the area, with a solid foundation. I definitely recommend this as a starting point for anyone who wants to dig deep into RL.
+* [Reinforcement Learning Specialization on Coursera](https://www.coursera.org/specializations/reinforcement-learning): I believe that, as of now, this is the most educational and informative resource available online to learn the fundamentals of RL from scratch. It is ministered by Martha and David White from UAlberta with special appearances by many prominent researchers.
 
-* [Introduction to reinforcement learning by David Silver](https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ) [[slides]](https://www.davidsilver.uk/teaching/): Before the RL specialization, I believe this playlist was the go-to reference to study RL. David Silver is also a reference in the area and also uses Sutton's book as a reference for the course. My only grudge with the course is that it assumes considerable previous knowledge in many areas, at times sounding more like a graduate course, encouraging students to prove statements while skipping K-armed bandits, for example.
+  While the specialization follows Sutton's book, it also adds its own value by giving additional step-by-step examples and providing additional definitions or explanations of the definitions from the book. You also learn a lot from the quizzes and practical tests, which are done in Jupyter Notebooks. I definitely recommend this as a starting point for anyone who wants to dig deep into RL, as the specialization focuses on the foundations of the area.
+  
+  A disclaimer: the course is not actually free. You can watch all the lectures and work on all non-graded exercises, but all the graded ones (which are needed to get the certificate) are locked. You also need to pay for each one of the 4 certificates in order to finish the specialization. One option to circumvent this is to see if you are eligible for [Coursera for university and students](https://www.coursera.org/for-university-and-college-students) (must have a `.edu` email) or for Financial Aid [[1]](https://learner.coursera.help/hc/en-us/articles/209819033-Apply-for-Financial-Aid-or-a-Scholarship) [[2]](https://blog.coursera.org/courseras-financial-aid-what-it-is-and-who-is/). In the case of Financial Aid, you must ask it for each course in the specialization.
 
-* [Deep RL Bootcamp](https://www.youtube.com/playlist?list=PLsuq9stvuZe4pc8T4NutncqaYzpmwBJtg) [[slides]](https://sites.google.com/view/deep-rl-bootcamp/lectures): lectures with some of the scientists behind the groundbreaking DRL algorithms created in the last years. Good explanations of DQN and policy gradient methods from their creators.
+* [Introduction to reinforcement learning by David Silver](https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ): Before the RL specialization, I believe this playlist was the go-to reference to study RL. David Silver is also a contemporary reference in the area and his lectures also use Sutton's book as reference. My only grudge with the course is that it assumes considerable previous knowledge in many areas, at times sounding more like a graduate course e.g, by encouraging students to prove statements while skipping $k$-armed bandits, for example. [Slides available](https://www.davidsilver.uk/teaching/).
+
+* [Deep RL Bootcamp](https://www.youtube.com/playlist?list=PLsuq9stvuZe4pc8T4NutncqaYzpmwBJtg): lectures with some of the scientists behind the groundbreaking DRL algorithms created in the last years. Good explanations of DQN and policy gradient methods from their creators.  [Slides available](https://sites.google.com/view/deep-rl-bootcamp/lectures).
 
 * [CS 285 at UC Berkeley](http://rail.eecs.berkeley.edu/deeprlcourse/): a full DRL course. This looks like the real deal. Unfortunately, it was not the material I used to learn what I know, but people highly recommend it, so I'll keep it in the list.
 
 * [Practical_RL](https://github.com/yandexdataschool/Practical_RL): *An open course on reinforcement learning in the wild [...] maintained to be friendly to online students (both english and russian).* This one is mostly maintained on GitHub. Unfortunately, lectures are in Russian, but there are slides and links to more material.
+
+* [Reinforcement Learning Course \| DeepMind & UCL](https://www.youtube.com/playlist?list=PLqYmG7hTraZBKeNJ-JE_eyJHZ7XgBoAyb): A YouTube playlist with 10 lectures averaging 1h40min each lecture
 
 ## Miscellaneous online material
 
@@ -67,9 +73,5 @@ A textual reference for the overall area of deep RL is hard to pinpoint, but per
 * Denny Britz has [a very famous repository](https://github.com/dennybritz/reinforcement-learning) of reinforcement algorithms over at GitHub.
 
 * [PyTorch official DQN tutorial](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html): this is the intermediate step in the PyTorch tutorials so, if you fancy learning some PyTorch, I believe this is the most straightforward way to implement and debug your first DRL algorithm.
-
-<!-- ## How to proceed
-
-Start with Sutton's book -->
 
 [ajsrl]: https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-1-fd544fab149
